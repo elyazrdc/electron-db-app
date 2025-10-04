@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informes</title>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.bootstrap5.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' crossorigin="anonymous">
+    <!-- Styles CSS  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <header class="d-flex justify-content-between bg-secondary-subtle border-bottom border-secondary border-1 p-1">
+        <a href="../main.html">
+            <button class="btn btn-dark d-flex align-items-center">
+                <i class='bx bx-arrow-back' style="font-size: 24px;"></i>
+                Atrás</button>
+        </a>
+        <a href="../index.html">
+            <button class="btn btn-danger d-flex align-items-center">
+                <i class='bx bxs-door-open' style='color:#ffffff; font-size: 24px;' ></i>
+                Cerrar Sesión</button>
+        </a>
+    </header>
+    <main id="main">
+        <div class="card m-1 text-center">
+            <div class="card-header bg-success-subtle">
+                <h1 class="text-success-subtle">Informes</h1>
+                <div class="d-flex justify-content-center mb-2">
+                    <a href="new_claim.html">
+                        <button class="d-flex align-items-center btn btn-success">
+                            Añadir informe
+                            <i class='bx bx-add-to-queue icon'></i>
+                        </button>
+                    </a>
+                    <!-- <a href="../pdf/pressPDF.php" target="_blank">
+                        <button type="button" class="d-flex align-items-center btn btn-danger">Imprimir PDF<box-icon name='file-pdf' type='solid' color='#ffffff' ></box-icon></button>
+                    </a> -->
+                </div>
+            </div>
+            
+            <!-- Claims Table -->
+            <div class="card-body div-table-responsive p-1">
+                <table class="table table-bordered" id="table_claims">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_claims_body">
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </main>
+    
+
+    <!-- DATATABLE SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
+    <script src="../js/app_claim.js"></script>
+    <script>
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById('main').style.opacity = 1;
+            }, 250);
+        }
+    </script>
+</body>
+</html>

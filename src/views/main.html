@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.bootstrap5.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Styles CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Menu Principal</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-end bg-secondary-subtle border-bottom border-secondary border-1 p-1">
+        <a href="../logout/logout.php">
+            <button class="btn btn-danger d-flex align-items-center">
+                <i class='bx bxs-door-open' style='color:#ffffff; font-size: 24px;' ></i>
+                Cerrar Sesión</button>
+        </a>
+    </header>
+
+    <main id="main" class="d-flex justify-content-center align-items-center" >
+
+        <div class="d-flex flex-row flex-wrap align-items-center justify-content-center gap-5">
+            <a href="claim/crud.html">
+                <div class="card bg-danger text-white text-center d-flex flex-column align-items-center justify-content-center custom-card">
+                    <i class='bx bx-receipt bx-flashing icon'></i>
+                    <h3 class="card-title">Lista de Reclamos</h3>
+                </div>
+            </a>
+
+            <a href="bolsas/crud.html">
+                <div class="card bg-success text-white text-center d-flex flex-column align-items-center justify-content-center custom-card">
+                    <i class='bx bxs-shopping-bag-alt bx-flashing icon'></i>
+                    <h3 class="card-title">Bolsas</h3>
+                </div>
+            </a>
+        </div>
+        
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
+    <script>
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById('main').style.opacity = 1;
+            }, 250);
+        }
+    </script>
+    <!-- SCRIPTS DE GESTION DE SESION  -->
+<script src="/js/session.js" defer></script>
+</body>

@@ -1,0 +1,67 @@
+a {
+    text-decoration: none !important;
+}
+
+body {
+    /* background: linear-gradient(180deg, rgb(223, 230, 243), rgb(204, 216, 238)); */
+    background: linear-gradient(180deg, #fff, #f8f8f8);
+    min-height: 100vh;
+    overflow-x: hidden;;
+}
+
+#main {
+    width:100%;
+    min-height:90vh;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    /* overflow-x: hidden; */
+}
+
+/* Nuevos estilos añadidos para hacer la tabla responsive */
+.div-table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+    height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Para un desplazamiento suave en dispositivos iOS */
+}
+
+.width-40 {
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .table {
+        font-size: 0.85rem;
+    }
+    .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+.custom-card {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+}
+
+.custom-card .icon {
+    font-size: 48px;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.icon {
+    font-size: 24px;
+    color: #FFFFFF;
+}
