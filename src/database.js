@@ -1,18 +1,19 @@
 const mysql = require('promise-mysql');
+//Cofiguracion de la Base de Datos, ingresar los datos en las variables
 
 const dbConfig = {
-    host: 'localhost',
-    user: 'root',
+    host: '',
+    user: '',
     password: '',
-    database: 'claism_db',
+    database: '',
     port: 3306,
-    // Configuraciones importantes para AwardSpace:
+    // Algunas configuraciones importantes:
     connectTimeout: 30000,
     acquireTimeout: 30000,
     timeout: 30000,
     charset: 'utf8mb4',
     timezone: 'Z',
-    ssl: false,  // AwardSpace generalmente no usa SSL en planes free
+    ssl: true, 
     // Opciones para evitar desconexiones:
     reconnect: true,
     multipleStatements: false
